@@ -50,7 +50,7 @@
                 {
                     "name": "WASD",
                     "id": "d1b64afd-1fcd-47d4-b066-218448566138",
-                    "path": "2DVector",
+                    "path": "2DVector(mode=2)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -105,7 +105,7 @@
                 {
                     "name": "Arrows",
                     "id": "e92d13be-dd98-4900-bd13-7cb164e07d53",
-                    "path": "2DVector",
+                    "path": "2DVector(mode=2)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

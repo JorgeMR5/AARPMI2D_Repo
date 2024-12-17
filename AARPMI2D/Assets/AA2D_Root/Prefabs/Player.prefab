@@ -43,8 +43,9 @@ GameObject:
   - component: {fileID: 3721488877696581240}
   - component: {fileID: 3214881712422001444}
   - component: {fileID: 5151718329803078191}
-  - component: {fileID: 7382949586226360153}
   - component: {fileID: 777669520788902843}
+  - component: {fileID: 3438860982527977341}
+  - component: {fileID: 6071036967684945719}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -168,7 +169,93 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &7382949586226360153
+--- !u!114 &777669520788902843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6208132405199954303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36607e97c09d17346986c84415e5b88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRb: {fileID: 0}
+  playerAnim: {fileID: 0}
+  playerInput: {fileID: 0}
+  speed: 5
+  isFacingRight: 1
+  jumpForce: 7
+  isGrounded: 0
+  groundCheck: {fileID: 3614326804064492481}
+  groundCheckRadius: 0.1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &3438860982527977341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6208132405199954303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 78e727c719f47624c8f42e62e75598fc, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 777669520788902843}
+        m_TargetAssemblyTypeName: PlayerController2D, Assembly-CSharp
+        m_MethodName: HandleMovement
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9016138d-cbe8-4a1b-bf8b-44f7b4503616
+    m_ActionName: Gameplay/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 777669520788902843}
+        m_TargetAssemblyTypeName: PlayerController2D, Assembly-CSharp
+        m_MethodName: HandleJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f94b587e-777d-4e35-a9d2-9b83ccd77f70
+    m_ActionName: Gameplay/Jump[/Keyboard/space]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Gameplay
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!61 &6071036967684945719
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,7 +287,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01038608, y: 0.7084443}
+  m_Offset: {x: -0.0026240349, y: 0.7185114}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -211,17 +298,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.67341775, y: 1.0991307}
+  m_Size: {x: 0.67604876, y: 1.069656}
   m_EdgeRadius: 0
---- !u!114 &777669520788902843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6208132405199954303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36607e97c09d17346986c84415e5b88b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
